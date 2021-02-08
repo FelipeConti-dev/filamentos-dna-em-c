@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+//Trabalho de verificaçao de filamentos de DNA
+
+int main() {
+	
+	char dna1[12], dna2[12];
+	
+	int num, y, i, A=0, B=0, C=0, D=0, E=0, F=0;
+	
+	scanf(" %d", &num);
+		for(y = 0;y < num; y++){
+			A=B=C=D=E=F=0;
+			
+	scanf("%s", dna1);
+	scanf("%s", dna2);
+	
+	for(i = 0; i < 12; i++){
+		if(dna1[i] == 'A')
+		A++;
+			if(dna1[i] == 'B')
+			B++;
+				if(dna1[i] == 'C')
+				C++;
+					if(dna1[i] == 'D')
+					D++;
+						if(dna1[i] == 'E')
+						E++;
+							if(dna1[i] == 'F')
+							F++;
+	}
+							
+	for(i = 0; i < 12; i++){
+		if(dna2[i] == 'A')
+		A--;
+			if(dna2[i] == 'B')
+			B--;
+				if(dna2[i] == 'C')
+				C--;
+					if(dna2[i] == 'D')
+					D--;
+						if(dna2[i] == 'E')
+						E--;
+							if(dna2[i] == 'F')
+							F--;
+	}
+		
+	if( (A == 0) && (B == 0 )&& (C == 0) && (D == 0) && (E == 0) && (F == 0) )
+		printf("Caracteristicas Iguais \n");
+	else
+		printf("Caracteristicas Diferentes \n");
+}
+	return 0;
+}
